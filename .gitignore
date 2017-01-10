@@ -3,3 +3,4 @@ scripts_home-tech/db_conf.inc.php
 .gitignore~
 *.php~
 *.bfproject
+*.template~
