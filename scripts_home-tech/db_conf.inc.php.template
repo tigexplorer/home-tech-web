@@ -1,7 +1,7 @@
 <?php
 
-/** 
-* config for db functions 
+/**
+* config for db functions
 *
 * PHP from version 5
 *
@@ -14,9 +14,9 @@
 
 
 function db_connect_pdo(){
-    $db_name = ""; // MySQL-db-Name 
-    $db_user = ""; // MySQL-User 
-    $db_pwd  = ""; // Passwort 
+    $db_name = ""; // MySQL-db-Name
+    $db_user = ""; // MySQL-User
+    $db_pwd  = ""; // Passwort
 
     $db = new PDO('mysql:host=localhost;dbname='.$db_name.';charset=utf8', $db_user, $db_pwd);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
