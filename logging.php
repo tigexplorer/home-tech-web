@@ -24,7 +24,7 @@ if ( isset($_GET['action']) ) {
 }
 
 # TODO else pa und pb
-if ( $action_ok ) {		
+if ( $action_ok ) {
 	if ( isset($_GET['pa']) ) {	
 		$field = $_GET['pa'];
 		$params += 1;
@@ -33,13 +33,20 @@ if ( $action_ok ) {
 		$value1 = $_GET['pb'];
 		$params += 1;
 	}
-	echo $params;
+	//echo $params;
 
 } else {
 	$message = "No Command. Nothing to do...";
 	echo $message;
 	exit;
 }
+
+if ( $params <> 2 ) {
+	$message = "Not enough Params. Nothing to do...";
+	echo $message;
+	exit;
+}
+
 // switch action 
 switch ( $action ):
 	case "add":    
