@@ -13,7 +13,8 @@
 
 require "../../scripts_home-tech/lib_db.inc.php";
 require "../../scripts_home-tech/lib_common.inc.php";
-		
+
+echo "a";
 // check action	
 if ( isset($_GET['action']) ) {	
     $action = $_GET['action'];		
