@@ -32,7 +32,8 @@ if ( $action_ok ) {
 
 } else {
 	$message = "No Command. Nothing to do...";
-	return $message;
+	echo $message;
+	exit;
 }
 // switch action 
 switch ( $action ):
