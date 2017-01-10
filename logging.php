@@ -13,14 +13,16 @@
 
 require "../../scripts_home-tech/lib_db.inc.php";
 
-echo "a";
+$action = "";
+$action_ok = false;
+
 // check action	
 if ( isset($_GET['action']) ) {	
     $action = $_GET['action'];		
-    $action_ok = "yes";
+    $action_ok = true;
 }
 # TODO else pa und pb
-if ( $action_ok == "yes" ) {		
+if ( $action_ok ) {		
     if ( isset($_GET['pa']) ) {	
         $field = $_GET['pa'];
     }
