@@ -15,20 +15,25 @@ require "../../scripts_home-tech/lib_db.inc.php";
 
 $action = "";
 $action_ok = false;
+$params = 0;
 
 // check action	
 if ( isset($_GET['action']) ) {	
     $action = $_GET['action'];		
     $action_ok = true;
 }
+
 # TODO else pa und pb
 if ( $action_ok ) {		
-    if ( isset($_GET['pa']) ) {	
-        $field = $_GET['pa'];
-    }
-    if ( isset($_GET['pb']) ) {	
-        $value1 = $_GET['pb'];
-    }
+	if ( isset($_GET['pa']) ) {	
+		$field = $_GET['pa'];
+		$params += 1;
+	}
+	if ( isset($_GET['pb']) ) {	
+		$value1 = $_GET['pb'];
+		$params += 1;
+	}
+	echo $params;
 
 } else {
 	$message = "No Command. Nothing to do...";
