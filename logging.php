@@ -26,11 +26,15 @@ if ( isset($_GET['action']) ) {
 # TODO else pa und pb
 if ( $action_ok ) {
 	if ( isset($_GET['pa']) ) {	
-		$field = $_GET['pa'];
+		$action = $_GET['pa'];
 		$params += 1;
 	}
 	if ( isset($_GET['pb']) ) {	
-		$value1 = $_GET['pb'];
+		$field = $_GET['pb'];
+		$params += 1;
+	}
+	if ( isset($_GET['pc']) ) {	
+		$value1 = $_GET['pc'];
 		$params += 1;
 	}
 	//echo $params;
@@ -41,7 +45,7 @@ if ( $action_ok ) {
 	exit;
 }
 
-if ( $params <> 2 ) {
+if ( $params <> 3 ) {
 	$message = "Not enough Params. Nothing to do...";
 	echo $message;
 	exit;
