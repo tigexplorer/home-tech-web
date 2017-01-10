@@ -57,7 +57,8 @@ switch ( $action ):
 		$new_id = db_query_add_item("ht_temp", $field, $value1);
 		$message = $new_id;
 		break;
-
+	default:
+		$message = "No valid action";
 endswitch;
 echo $message;
 ?>
