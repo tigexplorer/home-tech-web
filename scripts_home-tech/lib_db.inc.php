@@ -44,7 +44,7 @@ function db_query_update_item_1( $table, $fields, $value1, $value2, $value3, $va
 function db_query_add_item( $table, $field, $value1 ) {
     // add row
     $db = db_connect_pdo();
-    $stmt = $db->prepare("INSERT INTO ".$table."(".$fields.") VALUES(:value1)");
+    $stmt = $db->prepare("INSERT INTO ".$table."(".$field.") VALUES(:value1)");
     $stmt->execute(array(':value1' => $value1));
     $insertId = $db->lastInsertId();
     return $insertId;
