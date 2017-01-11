@@ -49,7 +49,7 @@ if ( $params <> 2 ) {
 // switch action 
 switch ( $action ):
 	case "view_temp":
-		$condition = "sensor_nr=".$sensor_nr."ORDER BY id DESC LIMIT 1";   
+		$condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 		$temp = db_query_display_item_1("ht_temp", $condition);
 		//$message = $new_id;
 		break;
