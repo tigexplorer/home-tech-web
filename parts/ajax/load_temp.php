@@ -15,10 +15,10 @@ require "../../../../scripts_home-tech/lib_db.inc.php";
 
 if ( !isset($_GET['pa']) ) {	
 	echo "Error - No param!";
-	exit;	
+	exit;
 }
 
-if ( !is_numeric($_GET['pa'];) ) {
+if ( !is_numeric($_GET['pa']) ) {
 	echo "Error - No valid value!";
 	exit;		
 }
