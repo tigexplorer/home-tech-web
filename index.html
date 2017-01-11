@@ -26,9 +26,10 @@
     <script src="parts/bootstrap/js/bootstrap.min.js"></script>
     <script>
 		$(document).ready(function(){
+			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
 			setInterval(function(){
 			$("#temp_2").load('parts/ajax/load_temp.php?pa=2')
-    	}, 20000);
+    		}, 20000);
 		});
 	</script>
   </body>
