@@ -17,7 +17,7 @@ if ( !isset($_GET['pa']) ) {
 	echo "Error - No param!";		
 }
 
-if ( !is_numeric($sensor_nr) )
+if ( !is_numeric($sensor_nr) ) {
 	echo "Error - No valid value!";		
 }
 
