@@ -5,7 +5,7 @@
 * PHP version 5
 *
 * @category Site
-* @package  Notes
+* @package  Home-Tech
 * @author   Joerg Sorge <joergsorge@googel.com>
 * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
 * @link     http://www.joergsorge.de
