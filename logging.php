@@ -29,7 +29,7 @@ if ( $action_ok ) {
 		$params += 1;
 	}
 	if ( isset($_GET['pb']) ) {	
-		$sensor = $_GET['pb'];
+		$sensor_nr = $_GET['pb'];
 		$params += 1;
 	}
 	if ( isset($_GET['pc']) ) {	
@@ -53,7 +53,7 @@ if ( $params <> 3 ) {
 // switch action 
 switch ( $action ):
 	case "add_temp":    
-		$new_id = db_query_add_item("ht_temp", $sensor, $value1);
+		$new_id = db_query_add_item("ht_temp", "sensor_nr", $sensor_nr, $value1);
 		$message = $new_id;
 		break;
 	default:
