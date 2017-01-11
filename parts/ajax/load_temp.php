@@ -14,11 +14,13 @@
 require "../../../../scripts_home-tech/lib_db.inc.php";
 
 if ( !isset($_GET['pa']) ) {	
-	echo "Error - No param!";		
+	echo "Error - No param!";
+	exit;	
 }
 
-if ( !is_numeric($sensor_nr) ) {
-	echo "Error - No valid value!";		
+if ( !is_numeric($_GET['pa'];) ) {
+	echo "Error - No valid value!";
+	exit;		
 }
 
 $sensor_nr = $_GET['pa'];
