@@ -17,6 +17,10 @@ if ( !isset($_GET['pa']) ) {
 	echo "Error - No param!";		
 }
 
+if ( !is_numeric($sensor_nr) )
+	echo "Error - No valid value!";		
+}
+
 $sensor_nr = $_GET['pa'];
 $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
