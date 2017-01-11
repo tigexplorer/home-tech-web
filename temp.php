@@ -50,7 +50,7 @@ if ( $params <> 2 ) {
 switch ( $action ):
 	case "view_temp":
 		$condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
-		$temp = db_query_display_item_1("ht_temp", $condition);
+		$tbl_row = db_query_display_item_1("ht_temp", $condition);
 		//$message = $new_id;
 		break;
 	default:
@@ -67,7 +67,7 @@ endswitch;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home-Tech</title>
-	<?php echo $temp;?>
+	<?php echo $tbl_row["temp"] / 1000;?>
     <!-- Bootstrap -->
     <link href="parts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
