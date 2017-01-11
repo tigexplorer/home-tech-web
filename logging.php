@@ -23,14 +23,13 @@ if ( isset($_GET['action']) ) {
     $action_ok = true;
 }
 
-# TODO else pa und pb
 if ( $action_ok ) {
 	if ( isset($_GET['pa']) ) {	
 		$action = $_GET['pa'];
 		$params += 1;
 	}
 	if ( isset($_GET['pb']) ) {	
-		$field = $_GET['pb'];
+		$sensor = $_GET['pb'];
 		$params += 1;
 	}
 	if ( isset($_GET['pc']) ) {	
@@ -53,12 +52,13 @@ if ( $params <> 3 ) {
 
 // switch action 
 switch ( $action ):
-	case "add":    
-		$new_id = db_query_add_item("ht_temp", $field, $value1);
+	case "add_temp":    
+		$new_id = db_query_add_item("ht_temp", $sensor, $value1);
 		$message = $new_id;
 		break;
 	default:
 		$message = "No valid action";
+		break;
 endswitch;
 echo $message;
 ?>
