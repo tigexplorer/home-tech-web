@@ -67,7 +67,6 @@ endswitch;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home-Tech</title>
-	<?php echo $tbl_row["temp"] / 1000;?>
     <!-- Bootstrap -->
     <link href="parts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,7 +79,7 @@ endswitch;
   </head>
   <body>
     <h1>Home-Tech at Alpha-Lab</h1>
-
+		<?php echo $tbl_row["temp"] / 1000;?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="parts/jquery/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
