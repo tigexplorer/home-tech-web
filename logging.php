@@ -53,7 +53,7 @@ if ( $params <> 3 ) {
 // switch action 
 switch ( $action ):
 	case "add_temp":    
-		$new_id = db_query_add_item("ht_temp", "sensor_nr", $sensor_nr, $value1);
+		$new_id = db_query_add_item("ht_temp", "sensor_nr, temp", $sensor_nr, $value1);
 		$message = $new_id;
 		break;
 	default:
