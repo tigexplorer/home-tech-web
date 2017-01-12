@@ -34,7 +34,7 @@ $tbl_rows = db_query_list_items_1( "ht_temp", "temp", $condition );
 // load last value
 $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
-$temp = $tbl_row["temp"] / 1000;
+$temp = substr( $tbl_row["temp"] / 1000, 0, 2);
 
 // select arrow
 if ( $tbl_rows[1]["temp"] > $tbl_rows[0]["temp"] ){
