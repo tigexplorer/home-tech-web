@@ -35,7 +35,7 @@ $tbl_rows = db_query_list_items_1( "ht_temp", "temp", $condition );
 $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
 $temp = substr( $tbl_row["temp"] / 1000, 0, 2);
-
+$tem_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 2);
 // select arrow
 if ( $tbl_rows[1]["temp"] > $tbl_rows[0]["temp"] ){
 	$arrow = ' <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>';		
@@ -49,13 +49,13 @@ if ( $tbl_rows[1]["temp"] < $tbl_rows[0]["temp"] ){
 
 // select color
 if ( $temp < 40 ) {
-	$color = '<span id="temp_2a" class="counter-cold" data-from="0" data-to="'.$temp.'">';
+	$color = '<span id="temp_2a" class="counter-cold" data-from="'.$temp_old.'" data-to="'.$temp.'">';
 }
 if ( $temp >= 40 and $temp < 50 ) {
-	$color = '<span id="temp_2a" class="counter-warm" data-from="0" data-to="'.$temp.'">';
+	$color = '<span id="temp_2a" class="counter-warm" data-from="'.$temp_old.'" data-to="'.$temp.'">';
 }
 if ( $temp >= 50 ) {
-	$color = '<span id="temp_2a" class="counter-hot" data-from="0" data-to="'.$temp.'">';
+	$color = '<span id="temp_2a" class="counter-hot" data-from="'.$temp_old.'" data-to="'.$temp.'">';
 }
 echo $color.$temp.$arrow."</span>";
 ?>
