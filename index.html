@@ -64,6 +64,7 @@
     <script>
 		$(document).ready(function(){
 			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
+			$('#temp_2a').countTo({speed: 15000});
 			setInterval(function(){
 			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
 			$('#temp_2a').countTo({speed: 15000});
@@ -71,7 +72,7 @@
 		});
 	</script>
 	<script type="text/javascript">
-  $('#temp_3').countTo({from: 0, to: 500, speed: 9000});
+  //$('#temp_3').countTo({from: 0, to: 500, speed: 9000});
 </script>
   </body>
 </html>
