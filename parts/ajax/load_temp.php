@@ -33,13 +33,14 @@ $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
 $temp = $tbl_row["temp"] / 1000;
 
-if ($tbl_rows[0]["temp"] > $tbl_rows[1]["temp"]){
+// select arrow
+if ($tbl_rows[1]["temp"] > $tbl_rows[0]["temp"]){
 	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>';		
 }
-if ($tbl_rows[0]["temp"] == $tbl_rows[1]["temp"]){
+if ($tbl_rows[1]["temp"] == $tbl_rows[0]["temp"]){
 	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
 }
-if ($tbl_rows[0]["temp"] < $tbl_rows[1]["temp"]){
+if ($tbl_rows[1]["temp"] < $tbl_rows[0]["temp"]){
 	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>';		
 }
 
