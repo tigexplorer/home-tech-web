@@ -54,7 +54,7 @@ if ( $temp < 40 ) {
 if ( $temp >= 40 and $temp > 50 ) {
 	$color = '<span class="counter-warm">';
 }
-if ( $temp > 50 ) {
+if ( $temp >= 50 ) {
 	$color = '<span class="counter-hot">';
 }
 echo $color.$temp.$arrow."</span>";
