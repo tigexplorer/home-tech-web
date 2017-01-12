@@ -24,7 +24,7 @@ if ( !is_numeric($_GET['pa']) ) {
 }
 
 $arrow = ' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
-$color = '<span>';
+$color = '<span id="temp_2a>';
 $sensor_nr = $_GET['pa'];
 
 // load last 2 for comparing
@@ -49,13 +49,13 @@ if ( $tbl_rows[1]["temp"] < $tbl_rows[0]["temp"] ){
 
 // select color
 if ( $temp < 40 ) {
-	$color = '<span class="counter-cold">';
+	$color = '<span id="temp_2a class="counter-cold" data-from="0" data-to="'.$temp.'">';
 }
 if ( $temp >= 40 and $temp < 50 ) {
-	$color = '<span class="counter-warm">';
+	$color = '<span id="temp_2a class="counter-warm" data-from="0" data-to="'.$temp.'">';
 }
 if ( $temp >= 50 ) {
-	$color = '<span class="counter-hot">';
+	$color = '<span id="temp_2a class="counter-hot" data-from="0" data-to="'.$temp.'">';
 }
 echo $temp.$color.$arrow."</span>";
 ?>
