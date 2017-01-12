@@ -85,7 +85,7 @@ endswitch;
 		<?php 
 		print_r ($tbl_rows);
 		print_r ($tbl_rows[0]);
-		echo "x".$tbl_rows[0][0]."x";
+		echo "x".$tbl_rows[0]["temp"]."x";
 		foreach ( $tbl_rows as $tbl_row) {
 			$i++;
 			echo $i."<br>";
