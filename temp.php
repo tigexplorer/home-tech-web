@@ -83,8 +83,15 @@ endswitch;
   <body>
     <h1>Home-Tech at Alpha-Lab</h1>
 		<?php 
-		foreach ( $tbl_rows as $tbl_row ) {
-			echo $tbl_row["temp"]."<br>";		
+		foreach ( $tbl_rows as $tbl_row $i++) {
+			echo $i
+			echo $tbl_row["temp"]."<br>";
+			$temp = $tbl_row["temp"];
+			if($i>0) {
+				if($tbl_row["temp"] > $temp) {
+					echo "g";
+			}
+		}
 		}		
 		echo $tbl_row["temp"] / 1000;
 		?>
