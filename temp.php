@@ -89,7 +89,12 @@ endswitch;
 		if ($tbl_rows[0]["temp"] > $tbl_rows[1]["temp"]){
 			echo "gr";		
 		}
-		
+		if ($tbl_rows[0]["temp"] == $tbl_rows[1]["temp"]){
+			echo "gl";		
+		}
+		if ($tbl_rows[0]["temp"] < $tbl_rows[1]["temp"]){
+			echo "kl";		
+		}
 		foreach ( $tbl_rows as $tbl_row) {
 			$i++;
 			echo $i."<br>";
