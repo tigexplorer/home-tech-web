@@ -40,7 +40,7 @@ if ($tbl_rows[0]["temp"] == $tbl_rows[1]["temp"]){
 	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
 }
 if ($tbl_rows[0]["temp"] < $tbl_rows[1]["temp"]){
-	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-top" aria-hidden="true"></span>';		
+	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>';		
 }
 
 ?>
