@@ -84,7 +84,8 @@ endswitch;
     <h1>Home-Tech at Alpha-Lab</h1>
 		<?php 
 		print_r ($tbl_rows);
-		echo "x".$tbl_rows[0]."x";
+		print_r ($tbl_rows[0]);
+		echo "x".$tbl_rows[0][0]."x";
 		foreach ( $tbl_rows as $tbl_row) {
 			$i++;
 			echo $i."<br>";
