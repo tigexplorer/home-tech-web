@@ -88,11 +88,13 @@ endswitch;
 			echo $i."<br>";
 			echo $tbl_row["temp"]."<br>";
 			$temp = $tbl_row["temp"];
-			if($i>1) {
+			if($i==2) {
 				echo ">1";
 				if($tbl_row["temp"] > $temp) {
-					echo "g";
-			}
+					echo ">";
+				} else {
+					echo "gggs";
+					}
 		}
 		}		
 		echo $tbl_row["temp"] / 1000;
