@@ -1,0 +1,44 @@
+/*
+Template: Hallooou HTML5 Responsive template
+Custom styles for Home-Tech
+Author: Joerg Sorge
+
+*/
+
+
+/*  ----------------------------------------------
+            CSS TABLE OF CONTENTS
+    ------------------------------------------------- */
+/*
+
+
+/*
+----------------------------------------------------- */
+
+/* COLOR STYLES
+/* ---------------------------------------------- */
+
+/* 1:   xxy */
+/* ---------------------------------------------- */
+
+.counter-section {
+    text-align: center;
+    background: url(../images/counter_bg.jpg) 50% 0 no-repeat scroll;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+         -o-background-size: cover;
+}
+
+.counter-section strong {
+    display: block;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 48px;
+    color: #fff;
+}
+
+.counter-wrap{
+    padding:50px 0;
+
+}

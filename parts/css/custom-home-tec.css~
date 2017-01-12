@@ -1,0 +1,35 @@
+/*
+Template: Hallooou HTML5 Responsive template
+Custom styles for Webstory
+Author: Joerg Sorge
+
+*/
+
+
+/*  ----------------------------------------------
+            CSS TABLE OF CONTENTS
+    ------------------------------------------------- */
+/*
+
+
+/*
+----------------------------------------------------- */
+
+/* COLOR STYLES
+/* ---------------------------------------------- */
+
+/* 1:   Body and paragraph text color */
+/* ---------------------------------------------- */
+
+.viewportheight {
+	 /* Adjust the heigth of a div to place audio element not on top of section */
+   height: 80vh; 
+
+}
+
+.onbottom {
+	/* Place content on bottom of the div */
+	position: absolute; 
+	bottom: 0; 
+	right: 0;
+}
