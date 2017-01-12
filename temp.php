@@ -89,6 +89,7 @@ endswitch;
 			echo $tbl_row["temp"]."<br>";
 			$temp = $tbl_row["temp"];
 			if($i>1) {
+				echo ">1";
 				if($tbl_row["temp"] > $temp) {
 					echo "g";
 			}
