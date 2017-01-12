@@ -49,6 +49,9 @@ if ( $params <> 2 ) {
 // switch action 
 switch ( $action ):
 	case "view_temp":
+		$condition0 = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 2";
+		$tbl_rows = db_query_list_items_1( "ht_temp", "temp", $condition0 );
+		
 		$condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 		$tbl_row = db_query_display_item_1("ht_temp", $condition);
 		//$message = $new_id;
@@ -79,7 +82,12 @@ endswitch;
   </head>
   <body>
     <h1>Home-Tech at Alpha-Lab</h1>
-		<?php echo $tbl_row["temp"] / 1000;?>
+		<?php 
+		foreach ( $tbl_rows as $tbl_row ) {
+			echo $tbl_row["temp"]."<br>";		
+		}		
+		echo $tbl_row["temp"] / 1000;
+		?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="parts/jquery/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
