@@ -83,6 +83,7 @@ endswitch;
   <body>
     <h1>Home-Tech at Alpha-Lab</h1>
 		<?php 
+		print_r ($tbl_rows);
 		foreach ( $tbl_rows as $tbl_row) {
 			$i++;
 			echo $i."<br>";
