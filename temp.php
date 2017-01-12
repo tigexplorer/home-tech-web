@@ -86,6 +86,10 @@ endswitch;
 		print_r ($tbl_rows);
 		print_r ($tbl_rows[0]);
 		echo "x".$tbl_rows[0]["temp"]."x";
+		if ($tbl_rows[0]["temp"] > $tbl_rows[1]["temp"]){
+			echo "gr";		
+		}
+		
 		foreach ( $tbl_rows as $tbl_row) {
 			$i++;
 			echo $i."<br>";
