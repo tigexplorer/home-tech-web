@@ -84,7 +84,7 @@ endswitch;
     <h1>Home-Tech at Alpha-Lab</h1>
 		<?php 
 		foreach ( $tbl_rows as $tbl_row $i++) {
-			echo $i
+			echo $i;
 			echo $tbl_row["temp"]."<br>";
 			$temp = $tbl_row["temp"];
 			if($i>0) {
