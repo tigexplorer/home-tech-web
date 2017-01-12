@@ -65,7 +65,8 @@
 		$(document).ready(function(){
 			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
 			setInterval(function(){
-			$("#temp_2").load('parts/ajax/load_temp.php?pa=2')
+			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
+			$('#temp_3').countTo({from: 0, to: 333});
     		}, 20000);
 		});
 	</script>
