@@ -23,7 +23,10 @@ if ( !is_numeric($_GET['pa']) ) {
 	exit;		
 }
 
+$arrow = ' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
+$color = '<span class="counter-cold"';
 $sensor_nr = $_GET['pa'];
+
 // load last 2 for comparing
 $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 2";
 $tbl_rows = db_query_list_items_1( "ht_temp", "temp", $condition );
@@ -34,14 +37,25 @@ $tbl_row = db_query_display_item_1("ht_temp", $condition);
 $temp = $tbl_row["temp"] / 1000;
 
 // select arrow
-if ($tbl_rows[1]["temp"] > $tbl_rows[0]["temp"]){
-	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>';		
+if ( $tbl_rows[1]["temp"] > $tbl_rows[0]["temp"] ){
+	$arrow = ' <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>';		
 }
-if ($tbl_rows[1]["temp"] == $tbl_rows[0]["temp"]){
-	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
+if ( $tbl_rows[1]["temp"] == $tbl_rows[0]["temp"] ){
+	$arrow = ' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
 }
-if ($tbl_rows[1]["temp"] < $tbl_rows[0]["temp"]){
-	echo $temp.' <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>';		
+if ( $tbl_rows[1]["temp"] < $tbl_rows[0]["temp"] ){
+	$arrow = ' <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>';		
 }
 
+// select color
+if ( $temp < 40 ) {
+	$color = '<span class="counter-cold"';
+}
+if ( $temp >= 40 and $temp > 50 ) {
+	$color = '<span class="counter-warm"';
+}
+if ( $temp > 50 ) {
+	$color = '<span class="counter-hot"';
+}
+echo $color.$temp.$arrow."</span>";
 ?>

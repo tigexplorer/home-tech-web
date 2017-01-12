@@ -41,3 +41,15 @@ Author: Joerg Sorge
     padding:50px 0;
 
 }
+
+.counter-hot {
+	color: red;
+}
+
+.counter-cold {
+	color: blue;
+}
+
+.counter-warm {
+	color: orange;
+}
