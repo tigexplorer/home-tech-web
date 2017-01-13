@@ -49,7 +49,7 @@
 <script>
 	$(document).ready(function(){
 		var temp = $('#numbers-1').text();
-		var disp = temp * 2 - 31
+		var disp = temp * 2 - 31;
 		//alert(temp)
 		TweenLite.to('#needle-1', 2, {rotation:disp,  transformOrigin:"bottom right"});
 		TweenLite.to('#needle-2', 2, {rotation:-31,  transformOrigin:"bottom right"});
