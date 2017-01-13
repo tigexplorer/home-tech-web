@@ -11,7 +11,7 @@
 * @link     http://www.joergsorge.de
 */
 
-require "../../scripts_home-tech/lib_db.inc.php";
+require "../../../scripts_home-tech/lib_db.inc.php";
 
 $action = "";
 $action_ok = false;
