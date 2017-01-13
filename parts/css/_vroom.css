@@ -95,3 +95,15 @@ label, input, p {
     /*font-size: 1.4em;
     font-family: "Courier New", Courier, monospace;*/
 }
+
+.counter-hot {
+	color: red;
+}
+
+.counter-cold {
+	color: blue;
+}
+
+.counter-warm {
+	color: orange;
+}
