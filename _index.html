@@ -58,19 +58,20 @@
 			$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
 			var temp_2 = $('#temp_2a').text();
 			if (temp_2_old < temp_2) {
-				alert("kleiner " + temp_2_old + " " + temp_2);
+				//alert("kleiner " + temp_2_old + " " + temp_2);
 			}
 			if (temp_2_old > temp_2) {
-				alert("gr " + temp_2_old + " " + temp_2);
+				//alert("gr " + temp_2_old + " " + temp_2);
 			}
 			if (temp_2_old == temp_2) {
-				alert("gleich "  + temp_2_old + " " + temp_2);
+				//alert("gleich "  + temp_2_old + " " + temp_2);
 			}
 
 			var disp_2 = temp_2 * 2 - 31;
 			TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
 			//TweenLite.to('#needle-2', 2, {rotation:60,  transformOrigin:"bottom right"});
-    		}, 4000);
+			$('#mi-km-2').text(' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>');
+    		}, 10000);
 	});	
 </script>
 
