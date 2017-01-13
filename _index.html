@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Vroom Plugin Demo</title>
+    <link rel="stylesheet" href="parts/css/_vroom.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenLite.min.js"></script>
+
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+
+</style>
+<body>
+
+<h1 style="margin:150px auto 30px auto; text-align:center; color:#fff;">Temperaturen</h1>
+
+<div class="wrapper">
+
+	<div class="gauge">
+		<div id="circle-1"></div>
+		<div id="numbers-1">10</div>
+		<div id="mi-km-1"></div>
+		<div id="needle-1"></div>
+
+
+		
+		
+	</div>
+</div>
+
+<div class="wrapper">
+
+	<div class="gauge">
+		<div id="circle-2"></div>
+		<div id="numbers-2"></div>
+		<div id="mi-km-2"></div>
+		<div id="needle-2"></div>
+
+
+		
+		
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		var temp = $('#numbers-1').text();
+		var disp = temp * 2 - 31
+		//alert(temp)
+		TweenLite.to('#needle-1', 2, {rotation:disp,  transformOrigin:"bottom right"});
+		TweenLite.to('#needle-2', 2, {rotation:-31,  transformOrigin:"bottom right"});
+		setInterval(function(){
+			$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
+			var temp_2 = $('#numbers-2').text();
+			var disp_2 = temp_2 * 2 - 31
+			TweenLite.to('#needle-2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
+    		}, 2000);
+	});	
+</script>
+
+</body>
+</html>
