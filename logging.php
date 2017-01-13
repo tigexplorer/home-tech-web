@@ -28,8 +28,8 @@ if ( $action_ok ) {
 		$sensor_nr = $_GET['pa'];
 		$params += 1;
 	}
-	if ( isset($_GET['pc']) ) {	
-		$value1 = $_GET['pc'];
+	if ( isset($_GET['pb']) ) {	
+		$value1 = $_GET['pb'];
 		$params += 1;
 	}
 	//echo $params;
