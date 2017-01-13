@@ -50,7 +50,7 @@ label, input, p {
     background: #000 url(../images/speedometer-2.png) no-repeat;
 }
 
-#needle-2, #needle-1 {
+#needle_1, #needle_2 {
     height: 5px;
     width: 148px;
     background: #ff0200;
