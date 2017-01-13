@@ -22,7 +22,7 @@
 
 	<div class="gauge">
 		<div id="circle-1"></div>
-		<div id="numbers-1">10</div>
+		<div id="numbers-1">20</div>
 		<div id="mi-km-1"></div>
 		<div id="needle-1"></div>
 
@@ -48,10 +48,10 @@
 
 <script>
 	$(document).ready(function(){
-		var temp = $('#numbers-1').text();
-		var disp = temp * 2 - 31;
+		var temp_1 = $('#numbers-1').text();
+		var disp_1 = temp_1 * 2 - 31;
 		//alert(temp)
-		TweenLite.to('#needle-1', 2, {rotation:disp,  transformOrigin:"bottom right"});
+		TweenLite.to('#needle-1', 2, {rotation:disp_1,  transformOrigin:"bottom right"});
 		TweenLite.to('#needle-2', 2, {rotation:-31,  transformOrigin:"bottom right"});
 		setInterval(function(){
 			$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
