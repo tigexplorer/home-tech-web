@@ -58,13 +58,13 @@
 			$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
 			var temp_2 = $('#temp_2a').text();
 			if (temp_2_old < temp_2) {
-				alert("kleiner");
+				alert("kleiner " + temp_2_old + " " + temp_2);
 			}
 			if (temp_2_old > temp_2) {
-				alert("gr");
+				alert("gr " + temp_2_old + " " + temp_2);
 			}
 			if (temp_2_old == temp_2) {
-				alert("gleich");
+				alert("gleich "  + temp_2_old + " " + temp_2);
 			}
 
 			var disp_2 = temp_2 * 2 - 31;
