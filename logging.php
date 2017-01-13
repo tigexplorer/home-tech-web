@@ -33,15 +33,23 @@ if ( $action_ok ) {
 		$params += 1;
 	}
 	//echo $params;
+	if ( !is_numeric($_GET['pa']) ) {
+		echo "Error 2 - No valid value!";
+	exit;		
+	}
+	if ( !is_numeric($_GET['pb']) ) {
+		echo "Error 3 - No valid value!";
+	exit;		
+	}
 
 } else {
-	$message = "No Command. Nothing to do...";
+	$message = "Error 0 - No Command. Nothing to do...";
 	echo $message;
 	exit;
 }
 
 if ( $params <> 2 ) {
-	$message = "Not enough Params. Nothing to do...";
+	$message = "Error 1 - Not enough Params. Nothing to do...";
 	echo $message;
 	exit;
 }
