@@ -54,10 +54,11 @@
 		TweenLite.to('#needle-1', 2, {rotation:disp,  transformOrigin:"bottom right"});
 		TweenLite.to('#needle-2', 2, {rotation:-31,  transformOrigin:"bottom right"});
 		setInterval(function(){
-			$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
-			var temp_2 = $('#numbers-2').text();
-			var disp_2 = temp_2 * 2 - 31;
-			TweenLite.to('#needle-2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
+			//$("#numbers-2").load('parts/ajax/load_temp.php?pa=2');
+			//var temp_2 = $('#numbers-2').text();
+			//var disp_2 = temp_2 * 2 - 31;
+			//TweenLite.to('#needle-2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
+			TweenLite.to('#needle-2', 2, {rotation:50,  transformOrigin:"bottom right"});
     		}, 2000);
 	});	
 </script>
