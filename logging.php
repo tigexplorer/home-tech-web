@@ -25,11 +25,7 @@ if ( isset($_GET['action']) ) {
 
 if ( $action_ok ) {
 	if ( isset($_GET['pa']) ) {	
-		$action = $_GET['pa'];
-		$params += 1;
-	}
-	if ( isset($_GET['pb']) ) {	
-		$sensor_nr = $_GET['pb'];
+		$sensor_nr = $_GET['pa'];
 		$params += 1;
 	}
 	if ( isset($_GET['pc']) ) {	
@@ -44,7 +40,7 @@ if ( $action_ok ) {
 	exit;
 }
 
-if ( $params <> 3 ) {
+if ( $params <> 2 ) {
 	$message = "Not enough Params. Nothing to do...";
 	echo $message;
 	exit;
