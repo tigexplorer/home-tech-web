@@ -84,7 +84,7 @@ label, input, p {
     position: absolute;
 }
 
-#mi-km-2, #mi-km-1 {
+.descr_1, .descr_2 {
     bottom: -25px;
     left: 97px;
     text-align: center;
@@ -92,8 +92,8 @@ label, input, p {
     width: 140px;
     height: 30px;
     color: #999;
-    /*font-size: 1.4em;
-    font-family: "Courier New", Courier, monospace;*/
+    font-size: 1.4em;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .counter-hot {
