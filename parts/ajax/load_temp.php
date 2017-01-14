@@ -1,6 +1,6 @@
 <?php
 /** 
-* view temp
+* load temp
 *
 * PHP version 5
 *
@@ -36,6 +36,7 @@ $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
 $temp = substr( $tbl_row["temp"] / 1000, 0, 2);
 $temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 2);
+
 // select arrow
 if ( $tbl_rows[1]["temp"] > $tbl_rows[0]["temp"] ){
 	$arrow = ' <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>';		
@@ -57,5 +58,7 @@ if ( $temp >= 40 and $temp < 50 ) {
 if ( $temp >= 50 ) {
 	$color = '<span class="counter-hot">';
 }
+
+// return html-formatted value
 echo '<span id="temp_2a">'.$temp."</span>".$color.$arrow."</span>";
 ?>
