@@ -75,7 +75,7 @@ label, input, p {
     border: 1px solid #292929;
 }
 
-#circle-2, #circle-1 {
+.circle {
     width: 79px;
     height: 79px;
     background: url(../images/circle-3.png)no-repeat;
