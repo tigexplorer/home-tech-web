@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Home-Tech</title>
+
+    <!-- Bootstrap -->
+    <link href="parts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="parts/css/special-home-tech.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		
+		<!-- Counter Section -->
+		<section id="counter-temp" class="counter-section">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<h2>Temperaturen</h2>
+					</div><!-- /.col-md-12 -->
+
+					<div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
+						<strong><span class="timer" data-from="0" data-to="350"></span></strong>
+							<span class="count-description">Außen</span>
+					</div><!-- /.col-sm-3 -->
+
+					<div class="col-sm-3 counter-wrap wow fadeInUp">
+						<strong><span><div id="temp_2"></div></span></strong>
+						<span class="count-description">Holz</span>
+					</div><!-- /.col-sm-3 -->
+
+					<div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
+						<strong><span id="temp_3">160</span></strong>
+						<span class="count-description">Wasser</span>
+					</div><!-- /.col-sm-3 -->
+
+					<div class="col-sm-3 counter-wrap wow fadeInUp" data-wow-offset="10">
+						<strong><span class="timer">1650</span></strong>
+						<span class="count-description">Cups Of Coffee</span>
+					</div><!-- /.col-sm-3 -->
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.counter-section -->
+            
+		
+		
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="parts/jquery/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="parts/bootstrap/js/bootstrap.min.js"></script>
+    <script src="parts/jquery/plugins/wow.min.js"></script>
+    <script src="parts/jquery/plugins/jquery.countTo.js"></script>
+    
+    <script>
+		$(document).ready(function(){
+			//$('#temp_2a').countTo({speed: 15000});
+			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
+			
+			setInterval(function(){
+			$("#temp_2").load('parts/ajax/load_temp.php?pa=2');
+			//$('#temp_2a').countTo({speed: 20000});
+    		}, 60000);
+		});
+	</script>
+	<script type="text/javascript">
+  $('.timer').countTo({from: 0, to: 30, speed: 15000});
+</script>
+  </body>
+</html>
