@@ -61,7 +61,7 @@
 		var temp_1 = $('#numbers_1').text();
 		var disp_1 = temp_1 * 2 - 31;
 		//alert(temp)
-		TweenLite.to('#needle_1', 2, {rotation:disp_1,  transformOrigin:"bottom right"});
+		TweenLite.to('#needle_1', 2, {rotation:-31,  transformOrigin:"bottom right"});
 		
 		$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
 		var temp_2 = $('#temp_2a').text();

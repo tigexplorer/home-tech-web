@@ -49,13 +49,13 @@ if ( $tbl_rows[1]["temp"] < $tbl_rows[0]["temp"] ){
 
 // select color
 if ( $temp < 40 ) {
-	$color = '<span class="counter-cold" data-from="'.$temp_old.'" data-to="'.$temp.'">';
+	$color = '<span class="counter-cold">';
 }
 if ( $temp >= 40 and $temp < 50 ) {
-	$color = '<span class="counter-warm" data-from="'.$temp_old.'" data-to="'.$temp.'">';
+	$color = '<span class="counter-warm">';
 }
 if ( $temp >= 50 ) {
-	$color = '<span class="counter-hot" data-from="'.$temp_old.'" data-to="'.$temp.'">';
+	$color = '<span class="counter-hot">';
 }
 echo '<span id="temp_2a">'.$temp."</span>".$color.$arrow."</span>";
 ?>
