@@ -35,25 +35,21 @@
 			</div><!-- /.col-md-12 -->
 			
 			<div class="col wow fadeInUp">
-				<!--<div class="wrapper"> -->
-					<div class="gauge">
-						<div class="circle"></div>
-						<div id="numbers_1">20</div>
-						<div class="descr_1">Außen</div>
-						<div id="needle_1"></div>
-					</div>
-
+				<div class="gauge">
+					<div class="circle"></div>
+					<div id="numbers_1">20</div>
+					<div class="descr_1">Außen</div>
+					<div id="needle_1"></div>
+				</div>
 			</div><!-- /.col-->
 
 			<div class="col wow fadeInUp">
-				<!--<div class="wrapper"> -->
-					<div class="gauge">
-						<div class="circle"></div>
-						<div id="numbers_2"></div>
-						<div class="descr_2">Holzofen</div>
-						<div id="needle_2"></div>
-					</div>
-
+				<div class="gauge">
+					<div class="circle"></div>
+					<div id="numbers_2"></div>
+					<div class="descr_2">Holzofen</div>
+					<div id="needle_2"></div>
+				</div>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
 	</div><!-- /.container -->
@@ -66,7 +62,12 @@
 		var disp_1 = temp_1 * 2 - 31;
 		//alert(temp)
 		TweenLite.to('#needle_1', 2, {rotation:disp_1,  transformOrigin:"bottom right"});
-		TweenLite.to('#needle_2', 2, {rotation:-31,  transformOrigin:"bottom right"});
+		
+		$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
+		var temp_2 = $('#temp_2a').text();
+		var disp_2 = temp_2 * 2 - 31;
+		TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
+			
 		setInterval(function(){
 			$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
 			var temp_2 = $('#temp_2a').text();
