@@ -15,20 +15,6 @@ body {
     margin: 0 auto;
 }
 
-.left {
-    float: left;
-    background: #191919;
-    border: 1px solid #292929;
-    color:#fff;
-    margin-top:100px;
-    padding:30px;
-}
-
-#right {
-    float: right;
-    background: #333;
-    color:#fff;
-}
 
 input {
 	background: #333;
