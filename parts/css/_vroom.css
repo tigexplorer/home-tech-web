@@ -33,7 +33,7 @@ label, input, p {
     width: 334px;
     position: relative;
     height: 260px;
-    background: #000 url(../images/speedometer-2.png) no-repeat;
+    background: #000 url(../images-gauge/speedometer-2.png) no-repeat;
 }
 
 #needle_1, #needle_2 {
@@ -64,7 +64,7 @@ label, input, p {
 .circle {
     width: 79px;
     height: 79px;
-    background: url(../images/circle-3.png)no-repeat;
+    background: url(../images-gauge/circle-3.png)no-repeat;
     bottom: 59px;
     left: 127px;
     position: absolute;
