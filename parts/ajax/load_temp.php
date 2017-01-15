@@ -52,10 +52,10 @@ if ( $tbl_rows[1]["temp"] < $tbl_rows[0]["temp"] ){
 if ( $temp < 40 ) {
 	$color = '<span class="counter-cold">';
 }
-if ( $temp >= 40 and $temp < 50 ) {
+if ( $temp >= 50 and $temp < 70 ) {
 	$color = '<span class="counter-warm">';
 }
-if ( $temp >= 50 ) {
+if ( $temp >= 80 ) {
 	$color = '<span class="counter-hot">';
 }
 
