@@ -77,7 +77,7 @@
 				value : temp_1
 			});
 		
-		var update = setInterval(function() {
+		setInterval(function() {
 				var newVal;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			newVal = Number(data);
