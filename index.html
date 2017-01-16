@@ -73,7 +73,16 @@
 				value : Math.floor((Math.random() * 99) + 1),
 				min : -25,
 				max : 50,
-				showNeedle : false
+				showNeedle : false,
+				label : {
+		            display : true,
+		            left : '-25',
+		            right : '+50',
+		            fontFamily : 'Helvetica',
+		            fontColor : '#1E4147',
+		            fontSize : '14',
+		            fontWeight : 'bold'
+		        }
 			});
 			
 		$('.js-gauge--1').kumaGauge('update', {
