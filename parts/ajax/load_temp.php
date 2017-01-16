@@ -23,6 +23,10 @@ if ( !is_numeric($_GET['pa']) ) {
 	exit;		
 }
 
+if ( isset($_GET['pb']) ) {	
+	$option = $_GET['pb'];
+}
+
 $arrow = ' <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>';
 $color = '<span>';
 $sensor_nr = $_GET['pa'];
@@ -59,6 +63,10 @@ if ( $temp >= 80 ) {
 	$color = '<span class="counter-hot">';
 }
 
-// return html-formatted value
-echo '<span id="temp_'.$sensor_nr.'a">'.$temp."</span>".$color.$arrow."</span>";
+if ( $option == "value_only" ) {
+	echo $temp;
+} else {
+	// return html-formatted value
+	echo '<span id="temp_'.$sensor_nr.'a">'.$temp."</span>".$color.$arrow."</span>";
+}
 ?>

@@ -60,11 +60,11 @@
 	$(document).ready(function(){
 		var temp_1;
 		var temp_1a;
-		$.get("parts/ajax/load_temp.php?pa=1", function (data) {
+		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
         temp_1 = data;
-        temp_1a = $('#temp_1a').text();
+        //temp_1a = $('#temp_1a').text();
         // data contains your html
-        //alert(temp_1a);
+        alert(temp_1);
     	});
     
 		$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
