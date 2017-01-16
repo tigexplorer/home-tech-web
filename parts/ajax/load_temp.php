@@ -42,13 +42,13 @@ $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
 
 // check for value below zero
-if ( $tbl_row["temp"] > 0 ) {
+if ( $tbl_row["temp"] < 0 ) {
 	$temp = substr( $tbl_row["temp"] / 1000, 0, 5);
 } else {
 	$temp = substr( $tbl_row["temp"] / 1000, 0, 2);
 }
 
-if ( $tbl_rows[1]["temp"] > 0 ) {
+if ( $tbl_rows[1]["temp"] < 0 ) {
 	$temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 5);
 } else {
 	$temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 2);
