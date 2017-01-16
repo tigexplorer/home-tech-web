@@ -61,30 +61,32 @@
 		var temp_1;
 		var temp_color
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
-        temp_1 = data;
-        // data contains your html
-        //alert(temp_1);
-        if (temp_1 <20) {
+			temp_1 = data;
+        	// data contains your html
+        	//alert(temp_1);
+			if (temp_1 < 20) {
 				temp_color = "blue";
-			} else if (val > 20) {
+			} else if (temp_1 >= 20) {
 				temp_color = "orange";
-			} else if (val > 25) {
+			} else if (temp_1 >= 25) {
 				temp_color = "red";
 			}
         	$("#gauge1").gauge(temp_1,{color: temp_color, unit: " °Celsius"});
     	});
-    
-		//$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
-		//var temp_1 = $('#temp_1a').text();
-		//alert(temp_1)
-		//$("#gauge1").gauge(35,{color: "#F44336", unit: " °Celsius"});
 
 		setInterval(function(){
 			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
 			var temp_1a = $('#temp_1a').text();
-			
-			$("#gauge1").gauge(temp_1a,{color: "#F44336", unit: " °Celsius"});
-    		}, 10000);
+			var temp_color
+			if (temp_1a < 20) {
+				temp_color = "blue";
+			} else if (temp_1a >= 20) {
+				temp_color = "orange";
+			} else if (temp_1a >= 25) {
+				temp_color = "red";
+			}
+			$("#gauge1").gauge(temp_1a,{color: emp_color, unit: " °Celsius"});
+    		}, 20000);
 		
 		$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
 		var temp_2 = $('#temp_2a').text();
