@@ -69,7 +69,10 @@
 			temp_1 = Number(data);
         	//alert(temp_1)
     	});
-		
+		$('.js-gauge--1').kumaGauge({
+				value : Math.floor((Math.random() * 99) + 1)
+			});
+			
 		$('.js-gauge--1').kumaGauge('update', {
 				value : 55
 			});
