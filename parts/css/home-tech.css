@@ -2,9 +2,10 @@ body {
     background: #000;
 }
 
-.wrapper {
-    width: 80%;
-    margin: 0 auto;
+.canvas {
+	display: block;
+	float: left;
+	margin: 10px auto;
 }
 
 .gauge {

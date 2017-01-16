@@ -9,6 +9,7 @@
 	<!-- Bootstrap -->
 	<link href="parts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="parts/css/home-tech.css">
+	<script src="parts/jquery-gauge/jquery.gauge.js"></script>
 	<script src="parts/greensock/CSSPlugin.min.js"></script>
 	<script src="parts/greensock/EasePack.min.js"></script>
 	<script src="parts/greensock/TweenLite.min.js"></script>
@@ -35,12 +36,7 @@
 			</div><!-- /.col-md-12 -->
 			
 			<div class="col-md-6 wow fadeInUp">
-				<div class="gauge">
-					<div class="circle"></div>
-					<div id="numbers_1">20</div>
-					<div class="descr_1">Außen</div>
-					<div id="needle_1"></div>
-				</div>
+				<canvas id="gauge1" width="200" height="200"></canvas>
 			</div><!-- /.col-->
 
 			<div class="col-md-6 wow fadeInUp">
@@ -58,10 +54,9 @@
 <script src="parts/jquery/jquery-3.1.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-		var temp_1 = $('#numbers_1').text();
-		var disp_1 = temp_1 * 2 - 31;
-		//alert(temp)
-		TweenLite.to('#needle_1', 2, {rotation:-31,  transformOrigin:"bottom right"});
+		var temp_1 = load('parts/ajax/load_temp.php?pa=1');
+		//alert(temp_1)
+		
 		
 		$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
 		var temp_2 = $('#temp_2a').text();
