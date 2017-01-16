@@ -37,8 +37,8 @@
 			
 			<div class="col-md-6 wow fadeInUp">
 <div>			
-				<div class="gauge_1">
-					<canvas id="gauge1" width="300" height="250"></canvas>
+				<div class="js-gauge js-gauge--1 gauge">>
+					
 					<div id="numbers_1"></div>
 					<div class="descr_2">Außen</div>
 				</div>
@@ -67,9 +67,13 @@
 		var temp_1;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			temp_1 = data;
-        	alert(temp_1)
+        	//alert(temp_1)
     	});
 		
+		$('.js-gauge--1').kumaGauge({
+				value : Math.floor((Math.random() * 99) + 1)
+			});
+			
 		var temp_2;
 		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
 			temp_2 = data;
