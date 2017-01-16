@@ -8,7 +8,7 @@ body {
 	margin: 10px auto;
 }
 
-.gauge_1 {
+.gauge, .gauge_1 {
     float:left;
     margin-left:40px;
     width: 334px;
@@ -17,11 +17,6 @@ body {
 }
 
 .gauge {
-    float:left;
-    margin-left:40px;
-    width: 334px;
-    position: relative;
-    height: 260px;
     background: #000 url(../images-gauge/speedometer-2.png) no-repeat;
 }
 
