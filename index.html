@@ -64,12 +64,11 @@
 
 <script>
 	$(document).ready(function(){
-		
-		$('#gauge_1').kumaGauge({
-			var temp_1;
-			$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
-				temp_1 = data;
-			});
+		var temp_1;
+		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
+			temp_1 = data;
+		});
+		$('#gauge_1').kumaGauge({	
 			min : -5,
 				label : {
 		            display : true,
