@@ -88,10 +88,19 @@
 			$("#gauge1").gauge(temp_1a,{color: temp_color, unit: " °Celsius"});
     		}, 20000);
 		
-		$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
-		var temp_2 = $('#temp_2a').text();
-		var disp_2 = temp_2 * 2 - 31;
-		TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
+		
+		var temp_2;
+		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
+			temp_2 = data;
+        	// data contains your html
+        	//alert(temp_1);
+			
+        	TweenLite.to('#needle_2', 2, {rotation:temp_2,  transformOrigin:"bottom right"});
+    	});
+		//$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
+		//var temp_2 = $('#temp_2a').text();
+		//var disp_2 = temp_2 * 2 - 31;
+		//TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
 			
 		setInterval(function(){
 			$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
