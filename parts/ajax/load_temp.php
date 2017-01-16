@@ -41,7 +41,7 @@ $tbl_rows = db_query_list_items_1( "ht_temp", "temp", $condition );
 $condition = "sensor_nr=".$sensor_nr." ORDER BY id DESC LIMIT 1";   
 $tbl_row = db_query_display_item_1("ht_temp", $condition);
 
-// outdoor temprature will display with 2 decimals
+// outdoor temprature will display with decimals
 if ( $sensor_nr == "1" ) {
 	$temp = substr( $tbl_row["temp"] / 1000, 0, 5);
 } else {
