@@ -64,13 +64,14 @@
         temp_1 = data;
         //temp_1a = $('#temp_1a').text();
         // data contains your html
-        alert(temp_1);
+        //alert(temp_1);
+        $("#gauge1").gauge(temp_1,{color: "#F44336", unit: " °Celsius"});
     	});
     
-		$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
-		var temp_1 = $('#temp_1a').text();
+		//$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
+		//var temp_1 = $('#temp_1a').text();
 		//alert(temp_1)
-		$("#gauge1").gauge(35,{color: "#F44336", unit: " °Celsius"});
+		//$("#gauge1").gauge(35,{color: "#F44336", unit: " °Celsius"});
 
 		setInterval(function(){
 			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
