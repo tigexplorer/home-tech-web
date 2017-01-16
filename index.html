@@ -78,18 +78,12 @@
 			});
 		
 		setInterval(function() {
-				var newVal;
-		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
-			newVal = Number(data);
-        	//alert(newVal)
-    	});
-    	$('.js-gauge--1').kumaGauge({
-				value : Math.floor((Math.random() * 99) + 1)
-			});
+$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
+			var temp_2 = $('#temp_2a').text();
 				$('.js-gauge--1').kumaGauge('update',{
-					value : newVal
+					value : temp_2
 				});		
-			}, 5000);		
+			}, 10000);		
 		
 		var temp_2;
 		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
