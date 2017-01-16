@@ -64,10 +64,9 @@
 <script>
 	$(document).ready(function(){
 		var temp_1;
-		var temp_color
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			temp_1 = data;
-        	$("#gauge1").gauge(temp_1,{color: "red", unit: " °Celsius", font: "14px Courier New"});
+        	alert(temp_1)
     	});
 		
 		var temp_2;
