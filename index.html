@@ -37,8 +37,7 @@
 			
 			<div class="col-md-6 wow fadeInUp">
 <div>			
-				<div class="gauge_1">
-					<canvas id="gauge1" width="300" height="250"></canvas>
+				<div class="js-gauge gauge_1 gauge">
 					<div id="numbers_1"></div>
 					<div class="descr_2">Außen</div>
 				</div>
@@ -60,39 +59,36 @@
 </section><!-- /.counter-section -->
 		
 <script src="parts/jquery/jquery-3.1.1.min.js"></script>
-<script src="parts/jquery-gauge/jquery.gauge.js"></script>
+<script src="parts/raphael/raphael-min.js"></script>
+<script src="parts/jquery-gauge/kuma-gauge.jquery.min.js"></script>
+
 <script>
 	$(document).ready(function(){
-		var temp_1;
-		var temp_color
-		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
-			temp_1 = data;
-        	// data contains your html
-        	//alert(temp_1);
-			if (temp_1 < 20) {
-				temp_color = "blue";
-			} else if (temp_1 >= 20) {
-				temp_color = "orange";
-			} else if (temp_1 >= 25) {
-				temp_color = "red";
-			}
-        	$("#gauge1").gauge(temp_1,{color: temp_color, unit: " °Celsius", font: "14px Courier New"});
-    	});
+		
+		$('#gauge_1').kumaGauge({
+			var temp_1;
+			$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
+				temp_1 = data;
+			});
+			min : -5,
+				label : {
+		            display : true,
+		            left : '-5',
+		            right : '50',
+		            fontFamily : 'Helvetica',
+		            fontColor : '#1E4147',
+		            fontSize : '11',
+		            fontWeight : 'bold'
+		        }
+			});
+
+			$('#gauge_1').kumaGauge('update', {
+				value : temp_1
+			});
 
 		setInterval(function(){
 			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
-			var temp_1a = $('#temp_1a').text();
-			var temp_color
-			if (temp_1a < 20) {
-				temp_color = "blue";
-			} else if (temp_1a >= 20) {
-				temp_color = "orange";
-			} else if (temp_1a >= 25) {
-				temp_color = "red";
-			}
-			$("#gauge1").gauge(temp_1a,{color: temp_color, unit: " °Celsius"});
-    		}, 100000);
-		
+			
 		
 		var temp_2;
 		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
