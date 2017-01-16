@@ -13,7 +13,7 @@ body {
     margin-left:40px;
     width: 334px;
     position: relative;
-    height: 260px;
+    height: 310px;
 }
 
 .gauge {
@@ -21,7 +21,7 @@ body {
     margin-left:40px;
     width: 334px;
     position: relative;
-    height: 280px;
+    height: 300px;
     background: #000 url(../images-gauge/speedometer-2.png) no-repeat;
 }
 
