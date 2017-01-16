@@ -35,13 +35,13 @@ body {
 }
 
 #numbers_2, #numbers_1 {
-    width: 120px;
+    width: 115px;
     height: 30px;
     background: #191919;
     position: absolute;
     text-align: center;
     bottom: 10px;
-    left: 110px;
+    left: 112px;
     color: #fff;
     font-size: 1.8em;
     line-height: 1.34em; 
