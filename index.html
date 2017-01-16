@@ -57,9 +57,10 @@
 <script>
 	$(document).ready(function(){
 		var temp_1;
+		var temp_1a;
 		$.get("parts/ajax/load_temp.php?pa=1", function (data) {
         temp_1 = data;
-        var temp_1a = $('#temp_1a').text();
+        temp_1a = $('#temp_1a').text();
         // data contains your html
         alert(temp_1a);
     	});
