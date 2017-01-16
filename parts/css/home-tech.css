@@ -3,9 +3,17 @@ body {
 }
 
 .canvas {
-	display: block;
+	/*display: block;*/
 	float: left;
 	margin: 10px auto;
+}
+
+.gauge_1 {
+    float:left;
+    margin-left:40px;
+    width: 334px;
+    position: relative;
+    height: 260px;
 }
 
 .gauge {
