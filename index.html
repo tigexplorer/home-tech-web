@@ -78,21 +78,6 @@
 			}
         	$("#gauge1").gauge(temp_1,{color: temp_color, unit: " °Celsius", font: "14px Courier New"});
     	});
-
-		setInterval(function(){
-			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
-			var temp_1a = $('#temp_1a').text();
-			var temp_color
-			if (temp_1a < 20) {
-				temp_color = "blue";
-			} else if (temp_1a >= 20) {
-				temp_color = "orange";
-			} else if (temp_1a >= 25) {
-				temp_color = "red";
-			}
-			$("#gauge1").gauge(temp_1a,{color: temp_color, unit: " °Celsius"});
-    		}, 100000);
-		
 		
 		var temp_2;
 		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
@@ -103,10 +88,6 @@
 			
         	TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
     	});
-		//$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
-		//var temp_2 = $('#temp_2a').text();
-		//var disp_2 = temp_2 * 2 - 31;
-		//TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
 			
 		setInterval(function(){
 			$("#numbers_2").load('parts/ajax/load_temp.php?pa=2');
