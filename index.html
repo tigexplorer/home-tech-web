@@ -64,13 +64,14 @@
 <script src="parts/jquery-gauge/kuma-gauge.jquery.min.js"></script>
 <script>
 	$(document).ready(function(){
+		
+		
+		$('.js-gauge--1').kumaGauge({
 		var temp_1;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			temp_1 = Number(data);
         	//alert(temp_1)
     	});
-		
-		$('.js-gauge--1').kumaGauge({
 				value : temp_1
 			});
 		
