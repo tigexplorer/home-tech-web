@@ -81,7 +81,7 @@
 				var newVal;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			newVal = Number(data);
-        	//alert(temp_1)
+        	alert(newVal)
     	});
 				$('.js-gauge--1').kumaGauge('update',{
 					value : newVal
