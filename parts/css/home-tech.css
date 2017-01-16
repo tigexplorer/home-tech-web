@@ -2,6 +2,17 @@ body {
     background: #000;
 }
 
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 .canvas {
 	display: block;
 	float: left;
