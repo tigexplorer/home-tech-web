@@ -76,7 +76,7 @@
 			} else if (temp_1 >= 25) {
 				temp_color = "red";
 			}
-        	$("#gauge1").gauge(temp_1,{min: -20, max: 50; color: temp_color, unit: " °Celsius"});
+        	$("#gauge1").gauge(temp_1,{color: temp_color, unit: " °Celsius"});
     	});
 
 		setInterval(function(){
@@ -90,7 +90,7 @@
 			} else if (temp_1a >= 25) {
 				temp_color = "red";
 			}
-			$("#gauge1").gauge(temp_1a,{min: -20, max: 50; color: temp_color, unit: " °Celsius"});
+			$("#gauge1").gauge(temp_1a,{color: temp_color, unit: " °Celsius"});
     		}, 20000);
 		
 		

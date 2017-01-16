@@ -3,8 +3,8 @@
     return this.each(function() {
 
       var settings = $.extend({
-        min: 0,
-        max: 100,
+        min: -20,
+        max: 50,
         unit: "%",
         color: "lightgreen",
         colorAlpha: 1,
