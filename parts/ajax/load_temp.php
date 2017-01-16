@@ -60,5 +60,5 @@ if ( $temp >= 80 ) {
 }
 
 // return html-formatted value
-echo '<span id="temp_2a">'.$temp."</span>".$color.$arrow."</span>";
+echo '<span id="temp_'.$sensor_nr'.a">'.$temp."</span>".$color.$arrow."</span>";
 ?>
