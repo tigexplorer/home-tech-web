@@ -78,11 +78,15 @@
 			});
 		
 		var update = setInterval(function() {
-				var newVal = Math.floor((Math.random() * 99) + 1);
+				var temp_1;
+		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
+			temp_1 = Number(data);
+        	//alert(temp_1)
+    	});
 				$('.js-gauge--1').kumaGauge('update',{
 					value : newVal
 				});		
-			}, 1000);		
+			}, 5000);		
 		
 		var temp_2;
 		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
