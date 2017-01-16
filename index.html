@@ -70,7 +70,8 @@
         	//alert(temp_1)
     	});
 		$('.js-gauge--1').kumaGauge({
-				value : Math.floor((Math.random() * 99) + 1)
+				value : Math.floor((Math.random() * 99) + 1),
+				min : -25
 			});
 			
 		$('.js-gauge--1').kumaGauge('update', {
@@ -78,7 +79,7 @@
 			});
 		
 		setInterval(function() {
-$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
+			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
 			var temp_2 = $('#temp_1a').text();
 				$('.js-gauge--1').kumaGauge('update',{
 					value : temp_2
