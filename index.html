@@ -64,26 +64,7 @@
 
 <script>
 	$(document).ready(function(){
-		var temp_1;
-		$.get("parts/ajax/load_temp.php?pa=2&pb=value_only", function (data) {
-			temp_1 = data;
-		});
-		$('#gauge_1').kumaGauge({	
-			min : -5,
-				label : {
-		            display : true,
-		            left : '-5',
-		            right : '50',
-		            fontFamily : 'Helvetica',
-		            fontColor : '#1E4147',
-		            fontSize : '11',
-		            fontWeight : 'bold'
-		        }
-			});
-
-			$('#gauge_1').kumaGauge('update', {
-				value : temp_1;
-			});
+		
 
 		setInterval(function(){
 			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
