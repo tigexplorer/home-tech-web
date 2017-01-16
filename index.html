@@ -67,16 +67,7 @@
 		var temp_color
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
 			temp_1 = data;
-        	// data contains your html
-        	//alert(temp_1);
-			if (temp_1 < 20) {
-				temp_color = "blue";
-			} else if (temp_1 >= 20) {
-				temp_color = "orange";
-			} else if (temp_1 >= 25) {
-				temp_color = "red";
-			}
-        	$("#gauge1").gauge(temp_1,{color: temp_color, unit: " °Celsius", font: "14px Courier New"});
+        	$("#gauge1").gauge(temp_1,{color: "red", unit: " °Celsius", font: "14px Courier New"});
     	});
 		
 		var temp_2;
@@ -94,7 +85,7 @@
 			var temp_2 = $('#temp_2a').text();
 			var disp_2 = temp_2 * 2 - 31;
 			TweenLite.to('#needle_2', 2, {rotation:disp_2,  transformOrigin:"bottom right"});
-    		}, 60000);
+    		}, 10000);
 	});	
 </script>
 
