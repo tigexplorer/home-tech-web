@@ -94,7 +94,16 @@
 			$("#numbers_1").load('parts/ajax/load_temp.php?pa=1');
 			var temp_2 = $('#temp_1a').text();
 				$('.js-gauge--1').kumaGauge('update',{
-					value : temp_2
+					value : temp_2,
+				label : {
+						display : true,
+		            left : '-25',
+		            right : '+50',
+		            fontFamily : 'Courier New',
+		            fontColor : '#FFFFFF',
+		            fontSize : '11',
+		            fontWeight : 'bold'
+		        }
 				});		
 			}, 10000);		
 		
