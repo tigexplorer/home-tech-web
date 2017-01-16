@@ -23,6 +23,8 @@ if ( !is_numeric($_GET['pa']) ) {
 	exit;		
 }
 
+$option = "";
+
 if ( isset($_GET['pb']) ) {	
 	$option = $_GET['pb'];
 }
