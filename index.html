@@ -78,9 +78,9 @@
 			});
 		
 		var update = setInterval(function() {
-				var temp_1;
+				var newVal;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
-			temp_1 = Number(data);
+			newVal = Number(data);
         	//alert(temp_1)
     	});
 				$('.js-gauge--1').kumaGauge('update',{
