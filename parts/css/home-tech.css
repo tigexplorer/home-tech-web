@@ -3,6 +3,8 @@ body {
 }
 
 .canvas {
+	width: 334px;
+	height: 260px;
 	display: block;
 	float: left;
 	margin: 10px auto;
