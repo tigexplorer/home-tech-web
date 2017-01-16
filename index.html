@@ -66,12 +66,12 @@
 	$(document).ready(function(){
 		var temp_1;
 		$.get("parts/ajax/load_temp.php?pa=1&pb=value_only", function (data) {
-			temp_1 = data;
+			temp_1 = Number(data);
         	//alert(temp_1)
     	});
 		
 		$('.js-gauge--1').kumaGauge({
-				value : 5
+				value : temp_1
 			});
 			
 						
