@@ -60,11 +60,13 @@ switch ( $action ):
 		$new_id = db_query_add_item("ht_temp", "sensor_nr, temp", $sensor_nr, $value1);
 		$message = $new_id;
 		break;
+
 	case "delete_logs":
-		$condition = "sensor_nr=".$sensor_nr." AND substr(time,0,10)<".date('Y-m-d', strtotime('-3 days'));
+		$condition = "sensor_nr=".$sensor_nr." AND substr(time,0,10)<".date('Y-m-d', strtotime('-7 days'));
 		$result = db_query_delete_items("ht_temp", $condition);
 		$message = $result;
 		break;
+
 	default:
 		$message = "No valid action";
 		break;
