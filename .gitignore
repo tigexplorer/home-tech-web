@@ -6,3 +6,4 @@ scripts_home-tech/db_conf.inc.php
 *.php~
 *.bfproject
 *.template~
+*.js~
