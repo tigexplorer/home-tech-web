@@ -55,7 +55,7 @@ if ( $sensor_nr == "1" ) {
 if ( $sensor_nr == "1" ) {
 	$temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 5);
 } else {
-	if ( $tbl_rows[1]["temp"] >= "100000" ) {
+	if ( $tbl_rows[1]["temp"] >= 100000 ) {
 		$temp = substr( $tbl_rows[1]["temp"] / 1000, 0, 3);
 	} else {
 		$temp = substr( $tbl_rows[1]["temp"] / 1000, 0, 2);
