@@ -65,9 +65,9 @@ switch ( $action ):
 		//$condition = "sensor_nr = ".$sensor_nr." AND r_time < TIMESTAMP(".date('Y-m-d', strtotime('-1 days')).")";
 		//$condition = "sensor_nr = ".$sensor_nr." AND from_unixtime(r_time, '%Y-%m-%d') < ".date('Y-m-d', strtotime('-1 days'));
 		// DELETE FROM `ht_temp` WHERE sensor_nr = 2 AND DATE(r_time) < DATE('2017-01-18')
-		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".date('Y-m-d', strtotime('-1 days'))."')";
+		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".date('Y-m-d', strtotime('-2 days'))."')";
 		$result = db_query_delete_items("ht_temp", $condition);
-		$message = $result." deleted older then ".date('Y-m-d', strtotime('-1 days'));
+		$message = $result." deleted older then ".date('Y-m-d', strtotime('-2 days'));
 		break;
 
 	default:
