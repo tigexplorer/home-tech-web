@@ -45,13 +45,21 @@ $tbl_row = db_query_display_item_1("ht_temp", $condition);
 if ( $sensor_nr == "1" ) {
 	$temp = substr( $tbl_row["temp"] / 1000, 0, 5);
 } else {
-	$temp = substr( $tbl_row["temp"] / 1000, 0, 2);
+	if ( strlen($tbl_row["temp"] ) > 5 ) {
+		$temp = substr( $tbl_row["temp"] / 1000, 0, 3);
+	} else {
+		$temp = substr( $tbl_row["temp"] / 1000, 0, 2);
+	}
 }
 
 if ( $sensor_nr == "1" ) {
 	$temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 5);
 } else {
-	$temp_old = substr( $tbl_rows[1]["temp"] / 1000, 0, 2);
+	if ( strlen($tbl_row["temp"] ) > 5 ) {
+		$temp = substr( $tbl_row[1]["temp"] / 1000, 0, 3);
+	} else {
+		$temp = substr( $tbl_row[1]["temp"] / 1000, 0, 2);
+	}
 }
 
 // select arrow
