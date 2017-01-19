@@ -65,6 +65,7 @@ function db_query_delete_items( $table, $condition ) {
     	$stmt = $db->query("DELETE FROM ".$table." WHERE ".$condition);
     	$result = $stmt->execute();
     	return $result;
+    }
 	catch(PDOException $e) {
    	echo $result . "<br>" . $e->getMessage();
     }
