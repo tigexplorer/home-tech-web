@@ -64,7 +64,7 @@ switch ( $action ):
 	case "delete_logs":
 		$condition = "sensor_nr = ".$sensor_nr." AND r_time < TIMESTAMP(".date('Y-m-d', strtotime('-1 days')).")";
 		$result = db_query_delete_items("ht_temp", $condition);
-		$message = $result;
+		$message = $result." ".date('Y-m-d', strtotime('-1 days'));
 		break;
 
 	default:
