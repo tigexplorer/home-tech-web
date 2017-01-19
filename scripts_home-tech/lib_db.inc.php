@@ -62,7 +62,8 @@ function db_query_add_item_1( $table, $fields, $value1, $value2, $value3, $value
 function db_query_delete_items( $table, $condition ) {
     $db = db_connect_pdo();
     $stmt = $db->query("DELETE FROM ".$table." WHERE ".$condition);
-    $stmt->execute();
+    $result = $stmt->execute();
+    return $result;
 }
 
 function db_query_delete_item_1( $table, $id ){
