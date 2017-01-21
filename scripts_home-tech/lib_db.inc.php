@@ -64,6 +64,8 @@ function db_query_delete_items( $table, $condition ) {
 		$db = db_connect_pdo();
     	$stmt = $db->query("DELETE FROM ".$table." WHERE ".$condition);
     	$result = $stmt->execute();
+    	$deleted = printf("Deleted rows: %d", mysql_affected_rows());
+    	$result = $result." - ".$deleted;
     	return $result;
     }
 	catch(PDOException $e) {
