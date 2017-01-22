@@ -62,9 +62,9 @@ function db_query_add_item_1( $table, $fields, $value1, $value2, $value3, $value
 function db_query_delete_items( $table, $condition ) {
 	try {
 		$db = db_connect_pdo();
-    	$stmt = $db->query("DELETE FROM ".$table." WHERE ".$condition);
+    	$stmt = $db->prepare("DELETE FROM ".$table." WHERE ".$condition);
     	$result = $stmt->execute();
-    	$deleted = " Deleted rows: ".mysql_affected_rows();
+    	$deleted = " Deleted rows: ".$stmt->rowCount();
     	$result = $result." - ".$deleted;
     	return $result;
     }
