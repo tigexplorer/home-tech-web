@@ -62,7 +62,14 @@ switch ( $action ):
 		break;
 
 	case "delete_logs":
-		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".date('Y-m-d', strtotime('-1 days'))."')";
+		$time_days_back = strtotime('-'.$value1.' days')
+		$date_days_back = date('Y-m-d', $time_days_back)
+		echo $time_days_back."\n";
+		echo $date_days_back."\n";
+		//date('Y-m-d', strtotime('-1 days'));
+		//$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".date('Y-m-d', strtotime('-1 days'))."')";
+		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".$time_days_back."')";
+		echo $condition;
 		$result = db_query_delete_items("ht_temp", $condition);
 		$message = $result." deleted older then ".date('Y-m-d', strtotime('-1 days'));
 		break;
