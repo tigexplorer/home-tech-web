@@ -68,8 +68,8 @@ switch ( $action ):
 		echo $date_days_back."\n";
 		//date('Y-m-d', strtotime('-1 days'));
 		//$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".date('Y-m-d', strtotime('-1 days'))."')";
-		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".$time_days_back."')";
-		echo $condition;
+		$condition = "sensor_nr = ".$sensor_nr." AND DATE(r_time) < DATE('".$date_days_back."')";
+		echo $condition."\n";
 		$result = db_query_delete_items("ht_temp", $condition);
 		$message = $result." deleted older then ".date('Y-m-d', strtotime('-1 days'));
 		break;
