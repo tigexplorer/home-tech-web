@@ -62,8 +62,8 @@ switch ( $action ):
 		break;
 
 	case "delete_logs":
-		$time_days_back = strtotime('-'.$value1.' days')
-		$date_days_back = date('Y-m-d', $time_days_back)
+		$time_days_back = strtotime('-'.$value1.' days');
+		$date_days_back = date('Y-m-d', $time_days_back);
 		echo $time_days_back."\n";
 		echo $date_days_back."\n";
 		//date('Y-m-d', strtotime('-1 days'));
