@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Home-Tech</title>
+	<!-- Bootstrap -->
+	<link href="parts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="parts/css/home-tech.css">
+	
+</head>
+<style>
+
+</style>
+<body>
+
+<section id="last">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h2>Letzte Stunde</h2>
+			</div><!-- /.col-md-12 -->
+			
+			<div class="col-md-6 wow fadeInUp">
+			<div id="pict_a_1"></div>
+			<div id="pict_a_2"></div>
+			<div id="pict_a_3"></div>
+			<div id="pict_a_4"></div>
+			</div><!-- /.col-->
+
+			<div class="col-md-6 wow fadeInUp">
+				
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</section><!-- /.counter-section -->
+		
+<script src="parts/jquery/jquery-3.1.1.min.js"></script>
+<!-- Set the CultureInfo to de-DE (German/Deutsch) 
+https://github.com/datejs/Datejs-->
+<script type="text/javascript" src="parts/js/date-de-DE.js"></script>
+<script>
+	$(document).ready(function(){
+		var c_dir = "cam_1/"
+		var c_hour = new Date().toString('HH')
+		var c_minute = new Date().toString('mm')
+		var pict_a_1 = new Date().toString('yyyy-MM-dd_') + c_hour + "00";
+		var pict_a_2 = new Date().toString('yyyy-MM-dd_') + c_hour + "15";
+		var pict_a_3 = new Date().toString('yyyy-MM-dd_') + c_hour + "30";
+		var pict_a_4 = new Date().toString('yyyy-MM-dd_') + c_hour + "45";
+		$('#pict_a_1').html('<img src="' + c_dir + "pict_1_" + pict_a_1 + '.jpg">');
+		$('#pict_a_2').html('<img src="' + c_dir + "pict_2_" + pict_a_2 + '.jpg">');
+		$('#pict_a_3').html('<img src="' + c_dir + "pict_3_" + pict_a_3 + '.jpg">');
+		$('#pict_a_4').html('<img src="' + c_dir + "pict_4_" + pict_a_4 + '.jpg">');
+		
+	});	
+</script>
+
+</body>
+</html>
