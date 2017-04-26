@@ -43,18 +43,21 @@ https://github.com/datejs/Datejs-->
 <script type="text/javascript" src="parts/js/date-de-DE.js"></script>
 <script>
 	$(document).ready(function(){
-		var c_dir = "cam_1/"
-		var c_hour = new Date().toString('HH')
-		var c_minute = new Date().toString('mm')
+		var c_dir = "https://alpha-lab.de/home-tech-web/cam_1/";
+		var c_hour = new Date().toString('HH') -1;
+		if ( c_hour < "10" ) {
+			c_hour = "0" + c_hour;
+		}
+		alert(c_hour);
 		var pict_a_1 = new Date().toString('yyyy-MM-dd_') + c_hour + "00";
 		var pict_a_2 = new Date().toString('yyyy-MM-dd_') + c_hour + "15";
 		var pict_a_3 = new Date().toString('yyyy-MM-dd_') + c_hour + "30";
 		var pict_a_4 = new Date().toString('yyyy-MM-dd_') + c_hour + "45";
 		$('#pict_a_1').html('<img src="' + c_dir + "pict_1_" + pict_a_1 + '.jpg">');
-		$('#pict_a_2').html('<img src="' + c_dir + "pict_2_" + pict_a_2 + '.jpg">');
-		$('#pict_a_3').html('<img src="' + c_dir + "pict_3_" + pict_a_3 + '.jpg">');
-		$('#pict_a_4').html('<img src="' + c_dir + "pict_4_" + pict_a_4 + '.jpg">');
-		
+		$('#pict_a_2').html('<img src="' + c_dir + "pict_1_" + pict_a_2 + '.jpg">');
+		$('#pict_a_3').html('<img src="' + c_dir + "pict_1_" + pict_a_3 + '.jpg">');
+		$('#pict_a_4').html('<img src="' + c_dir + "pict_1_" + pict_a_4 + '.jpg">');
+			
 	});	
 </script>
 
