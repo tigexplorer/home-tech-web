@@ -23,6 +23,7 @@
 				<div id="pict_a_3"></div>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
+
 		<div class="row">
 			<div class="col-md-6">
 				<div id="pict_a_2"></div>
@@ -31,6 +32,25 @@
 				<div id="pict_a_1"></div>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
+
+		<div class="row">
+			<div class="col-md-6">
+				<div id="pict_b_4"></div>
+			</div><!-- /.col-->
+			<div class="col-md-6">
+				<div id="pict_b_3"></div>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
+		<div class="row">
+			<div class="col-md-6">
+				<div id="pict_b_2"></div>
+			</div><!-- /.col -->
+			<div class="col-md-6">
+				<div id="pict_b_1"></div>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
 	</div><!-- /.container -->
 </section><!-- /.counter-section -->
 
@@ -41,19 +61,31 @@ https://github.com/datejs/Datejs-->
 <script>
 	$(document).ready(function(){
 		var c_dir = "cam_1/";
-		var c_hour = new Date().toString('HH') -1;
-		if ( c_hour < "10" ) {
-			c_hour = "0" + c_hour;
+		var c_hour_a = new Date().toString('HH') -1;
+		if ( c_hour_a < "10" ) {
+			c_hour_a = "0" + c_hour_a;
 		}
-
-		var pict_a_1 = new Date().toString('yyyy-MM-dd_') + c_hour + "00";
-		var pict_a_2 = new Date().toString('yyyy-MM-dd_') + c_hour + "15";
-		var pict_a_3 = new Date().toString('yyyy-MM-dd_') + c_hour + "30";
-		var pict_a_4 = new Date().toString('yyyy-MM-dd_') + c_hour + "45";
+		var pict_a_1 = new Date().toString('yyyy-MM-dd_') + c_hour_a + "00";
+		var pict_a_2 = new Date().toString('yyyy-MM-dd_') + c_hour_a + "15";
+		var pict_a_3 = new Date().toString('yyyy-MM-dd_') + c_hour_a + "30";
+		var pict_a_4 = new Date().toString('yyyy-MM-dd_') + c_hour_a + "45";
 		$('#pict_a_1').html('<img src="' + c_dir + "pict_1_" + pict_a_1 + '.jpg">');
 		$('#pict_a_2').html('<img src="' + c_dir + "pict_1_" + pict_a_2 + '.jpg">');
 		$('#pict_a_3').html('<img src="' + c_dir + "pict_1_" + pict_a_3 + '.jpg">');
 		$('#pict_a_4').html('<img src="' + c_dir + "pict_1_" + pict_a_4 + '.jpg">');
+
+		var c_hour_b = new Date().toString('HH') -2;
+		if ( c_hour_b < "10" ) {
+			c_hour_b = "0" + c_hour_b;
+		}
+		var pict_b_1 = new Date().toString('yyyy-MM-dd_') + c_hour_b + "00";
+		var pict_b_2 = new Date().toString('yyyy-MM-dd_') + c_hour_b + "15";
+		var pict_b_3 = new Date().toString('yyyy-MM-dd_') + c_hour_b + "30";
+		var pict_b_4 = new Date().toString('yyyy-MM-dd_') + c_hour_b + "45";
+		$('#pict_b_1').html('<img src="' + c_dir + "pict_1_" + pict_b_1 + '.jpg">');
+		$('#pict_b_2').html('<img src="' + c_dir + "pict_1_" + pict_b_2 + '.jpg">');
+		$('#pict_b_3').html('<img src="' + c_dir + "pict_1_" + pict_b_3 + '.jpg">');
+		$('#pict_b_4').html('<img src="' + c_dir + "pict_1_" + pict_b_4 + '.jpg">');
 
 	});
 </script>
