@@ -15,7 +15,23 @@
 
 <section id="last">
 	<div class="container">
-		<div id="minute"></div>
+		<div class="row">
+			<div class="col-md-6">
+				<div id="minute"></div>
+			</div><!-- /.col -->
+			<div class="col-md-6">
+				<div id="pict_3"></div>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+		<div class="row">
+			<div class="col-md-6">
+				<div id="pict_2"></div>
+			</div><!-- /.col -->
+			<div class="col-md-6">
+				<div id="pict_1"></div>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
 		<div class="row">
 			<div class="col-md-6">
 				<div id="pict_a_4"></div>
@@ -62,11 +78,26 @@ https://github.com/datejs/Datejs-->
 <script>
 	$(document).ready(function(){
 		var c_dir = "cam_1/";
+		var c_hour = new Date().toString('HH');
 		var c_minute = new Date().toString('mm') -1;
 		if ( c_minute < "10" ) {
 			c_minute = "0" + c_minute;
 		}
 		$('#minute').html(c_minute);
+		if ( c_minute > 20 ) {
+			var pict_1 = new Date().toString('yyyy-MM-dd_') + c_hour + "15";
+			$('#pict_1').html('<img src="' + c_dir + "pict_1_" + pict_1 + '.jpg">');
+		}
+
+		if ( c_minute > 35 ) {
+			var pict_2 = new Date().toString('yyyy-MM-dd_') + c_hour + "30";
+			$('#pict_2').html('<img src="' + c_dir + "pict_1_" + pict_2 + '.jpg">');
+		}
+
+		if ( c_minute > 50 ) {
+			var pict_3 = new Date().toString('yyyy-MM-dd_') + c_hour + "45";
+			$('#pict_3').html('<img src="' + c_dir + "pict_1_" + pict_3 + '.jpg">');
+		}
 
 		var c_hour_a = new Date().toString('HH') -1;
 		if ( c_hour_a < "10" ) {
