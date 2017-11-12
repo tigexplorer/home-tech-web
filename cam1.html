@@ -15,6 +15,7 @@
 
 <section id="last">
 	<div class="container">
+		<div id="minute"></div>
 		<div class="row">
 			<div class="col-md-6">
 				<div id="pict_a_4"></div>
@@ -61,6 +62,12 @@ https://github.com/datejs/Datejs-->
 <script>
 	$(document).ready(function(){
 		var c_dir = "cam_1/";
+		var c_minute = new Date().toString('mm') -1;
+		if ( c_minute < "10" ) {
+			c_minute = "0" + c_minute;
+		}
+		$('#minute').html(c_minute);
+
 		var c_hour_a = new Date().toString('HH') -1;
 		if ( c_hour_a < "10" ) {
 			c_hour_a = "0" + c_hour_a;
